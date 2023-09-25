@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .arrowbox1-right {
+        position: relative;
+        display: inline-block;
+        margin: 1.5em 15px 1.5em 0;
+        padding: 20px 10px;
+        min-width: 120px;
+        max-width: 100%;
+        clear: both;
+        color: #555;
+        font-size: 16px;
+        background: #e0f2ff;
+      }
+
+      .arrowbox1-right:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        margin-top: -15px;
+        border: 15px solid transparent;
+        border-left: 15px solid #e0f2ff;
+      }
+
+      .arrowbox1-right p {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="arrowbox1-right">
+      <p>Hello，这是对话框案例。</p>
+    </div>
+  </body>
+</html>
