@@ -20,7 +20,7 @@
       }
 
       .red {
-        background-image: "./bg1.jpeg";
+        background-image: "./image/bg1.jpeg";
         border: 5px black;
         width: 20%;
         height: 100vh;
@@ -46,36 +46,37 @@
       }
 
       .car-img {
-        background-image: url("./image\ \(1\).jpg");
+        background-image: url("./image/image\ \(1\).jpg");
         background-size: cover;
         background-position: center center;
       }
 
       .car-img2 {
-        background-image: url("./bg1.jpeg");
+        background-image: url("./image/bg1.jpeg");
         background-size: cover;
         background-position: center center;
       }
     </style>
+    <link rel="stylesheet" href="./pageIndex.css" />
   </head>
 
   <body>
     <div class="red col-md-3 col-2 d-none d-lg-block">
       <div class="card">
         <a href="index.html"
-          ><img src="./icon.png" class="card-img-top" alt="..."
+          ><img src="./image/icon.png" class="card-img-top" alt="..."
         /></a>
 
         <div class="card-body text-center">
           <h5 class="card-title text-warning">Catslin</h5>
           <p class="card-text">混吃等死的下流人士. >></p>
-          <a href="#" class="btn btn-primary">展示更多</a>
+          <a href="#" class="btn btn-primary" id="show-more">展示更多</a>
         </div>
         <!--  -->
-        <div class="card card-small  h-50">
+        <div class="card card-small h-50 show-card">
           <div class="card-body text-center">我喜欢的 video >></div>
         </div>
-        <div class="card card-small h-50">
+        <div class="card card-small h-50 show-card">
           <div class="card-body text-center">一些疑问 >></div>
         </div>
       </div>
@@ -130,4 +131,26 @@
       <!-- card-3 -->
     </div>
   </body>
+  <script>
+    // 获取展示更多按钮
+    var showMoreBtn = document.querySelector("#show-more");
+
+    // 获取所有卡片
+    var cards = document.querySelectorAll(".show-card");
+    // 隐藏所有卡片
+    for (var i = 0; i < cards.length; i++) {
+      cards[i].style.opacity = "0";
+    }
+
+    // 点击按钮显示/隐藏卡片
+    showMoreBtn.addEventListener("click", function () {
+      for (var i = 0; i < cards.length; i++) {
+        if (cards[i].style.opacity === "0") {
+          cards[i].style.opacity = "1";
+        } else {
+          cards[i].style.opacity = "0";
+        }
+      }
+    });
+  </script>
 </html>
