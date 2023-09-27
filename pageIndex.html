@@ -1,87 +1,124 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bootstrap Card Example</title>
-  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-  <style>
-    .red {
-      background-color: red;
-      width: 20%;
-      height: 100vh;
-      float: left;
-    }
-    .yellow {
-      background-color: yellow;
-      width: 70%;
-      height: 100vh;
-      float: left;
-    }
-    .blue {
-      background-color: blue;
-      width: 10%;
-      height: 100vh;
-      float: left;
-    }
-    .card {
-      margin: 20px;
-    }
-  </style>
-</head>
-<body>
-  <div class="red">
-    <div class="card">
-      <img src="./image-1.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-    <!-- <div class="card">
-      <img src="./image-2.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div> -->
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Card Example</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <style>
+      .vl {
+        border-left: 2px solid black;
+        height: 100%;
+        position: absolute;
+        top: 0;
+      }
 
-  
-  <div class="yellow">
-    <div class="card w-580">
-      <img src="./image2.png" class="card-img-top img-fluid" style="width: 40%;" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-    <div class="card">
-      <img src="./image (1).jpg" class="card-img-top" style="width: 40%;" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
+      .red {
+        background-image: "./bg1.jpeg";
+        border: 5px black;
+        width: 20%;
+        height: 100vh;
+        float: left;
+      }
 
+      .yellow {
+        border: 5px black;
+        width: 70%;
+        height: 100vh;
+        float: left;
+      }
 
-  <div class="blue">
-    <div class="card">
-      <img src="./image-5.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+      .blue {
+        border: 5px black;
+        width: 10%;
+        height: 100vh;
+        float: left;
+      }
+
+      .card {
+        margin: 20px;
+      }
+
+      .car-img {
+        background-image: url("./image\ \(1\).jpg");
+        background-size: cover;
+        background-position: center center;
+      }
+
+      .car-img2 {
+        background-image: url("./bg1.jpeg");
+        background-size: cover;
+        background-position: center center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="red col-md-3 col-2 d-none d-lg-block">
+      <div class="card">
+        <a href="index.html"><img src="./icon.png" class="card-img-top" alt="..."></a>
+        
+        <div class="card-body text-center">
+          <h5 class="card-title text-warning">Catslin</h5>
+          <p class="card-text">
+            混吃等死的下流人士. >>
+          </p>
+          <a href="#" class="btn btn-primary">展示更多</a>
+        </div>
       </div>
     </div>
-  </div>
-  <script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdn.staticfile.org/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-</body>
+    
+
+    <div class="yellow col-md-9 col-sm-12 col-12">
+      <div class="card w-580 car-img">
+        <a href="index.html">
+          <div class="card-body">
+            <div class="row" style="margin-top: 10px">
+              <div class="col-2 d-none d-md-block">
+                <h5 class="card-title">2023/9/27</h5>
+                <h6>8:02</h6>
+              </div>
+              <div class="col-1">
+                <div class="vl"></div>
+              </div>
+              <div class="col-9">
+                <h5 class="card-title">Article Title Goes Here</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <!-- card-2 -->
+      <a href="article2.html">
+        <div class="card w-580 car-img2">
+          <div class="card-body">
+            <div class="row" style="margin-top: 10px">
+              <div class="col-2 d-none d-md-block">
+                <h5 class="card-title">2023/9/28</h5>
+                <h6>10:30</h6>
+              </div>
+              <div class="col-1">
+                <div class="vl"></div>
+              </div>
+              <div class="col-9">
+                <h5 class="card-title">Another Article Title Goes Here</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+      <!-- card-3 -->
+    </div>
+  </body>
 </html>
