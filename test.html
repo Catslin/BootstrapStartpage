@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>点击按钮显示/隐藏卡片</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <button id="show-more" class="btn btn-primary">展示更多</button>
+
+  <div class="container">
+    <div class="row">
+      <div class="red col-md-3 col-2 d-none d-lg-block">
+        <div class="card">
+          <a href="index.html"><img src="./icon.png" class="card-img-top" alt="..."></a>
+
+          <div class="card-body text-center">
+            <h5 class="card-title text-warning">Catslin</h5>
+            <p class="card-text">
+              混吃等死的下流人士. >>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card">
+          <img src="./cat1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">可爱的小猫咪</h5>
+            <p class="card-text">这是一只可爱的小猫咪，它非常喜欢玩耍和吃东西。</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <img src="./cat2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">懒洋洋的大肥猫</h5>
+            <p class="card-text">这是一只懒洋洋的大肥猫，它最喜欢的事情就是睡觉。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col-md-6">
+        <div class="card">
+          <img src="./cat3.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">黑白相间的小猫咪</h5>
+            <p class="card-text">这是一只黑白相间的小猫咪，它非常聪明，喜欢玩游戏。</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <img src="./cat4.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">美丽的橘色猫咪</h5>
+            <p class="card-text">这是一只美丽的橘色猫咪，它非常温柔，喜欢被人抱着。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // 获取展示更多按钮
+    var showMoreBtn = document.querySelector('#show-more');
+
+    // 获取所有卡片
+    var cards = document.querySelectorAll('.card');
+
+    // 隐藏所有卡片
+    for (var i = 0; i < cards.length; i++) {
+      cards[i].style.display = 'none';
+    }
+
+    // 点击按钮显示/隐藏卡片
+    showMoreBtn.addEventListener('click', function() {
+      for (var i = 0; i < cards.length; i++) {
+        if (cards[i].style.display === 'none') {
+          cards[i].style.display = 'block';
+        } else {
+          cards[i].style.display = 'none';
+        }
+      }
+    });
+  </script>
+</body>
+</html>
