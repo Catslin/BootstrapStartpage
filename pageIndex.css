@@ -10,10 +10,10 @@ a:hover {
 
 .red {
   background-image: "./image/bg1.jpeg";
-  border: 5px black;
   width: 20%;
   height: 100vh;
   float: left;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .yellow {
@@ -32,6 +32,10 @@ a:hover {
 
 .card {
   margin: 20px;
+  flex-grow: 1;
+}
+.show-card {
+  flex-basis: calc(100% / 3); /* 假设有三个show-card */
 }
 
 .car-img {
@@ -47,5 +51,5 @@ a:hover {
 }
 
 .show-card {
-    transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
